@@ -11,3 +11,6 @@ body {
   color: var(--mainaccent);
 }
 
+button {
+  background-color: black;
+}
