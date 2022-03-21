@@ -1,17 +1,13 @@
 :root {
-
   /* Color */
   --mainbackground: #333;
   --mainaccent: white;
   --lightaccent: #888;
   --darkaccent: black;
-
-  /* Typography */
-  --heading: helvetica, sans-serif;
-  
 }
 
 body {
   background-color: var(--mainbackground);
   color: var(--mainaccent);
 }
+
