@@ -1,9 +1,9 @@
 :root {
   /* Color */
-  --mainbackground: #333;
+  --mainbackground: rgb(114, 104, 255);
   --mainaccent: white;
-  --lightaccent: #888;
-  --darkaccent: black;
+  --lightaccent: black;
+  --darkaccent: rgb(57, 49, 160);
 }
 
 body {
@@ -11,6 +11,13 @@ body {
   color: var(--mainaccent);
 }
 
-button {
-  background-color: black;
+header {
+  background-color: var(--darkaccent);
+  display: grid;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
 }
