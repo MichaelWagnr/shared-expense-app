@@ -1,4 +1,4 @@
-import './minimal.css';
+import './reset.css';
 import './App.css';
 
 
