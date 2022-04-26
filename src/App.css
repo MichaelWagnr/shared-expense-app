@@ -1,23 +1,12 @@
 :root {
-  /* Color */
-  --mainbackground: rgb(114, 104, 255);
-  --mainaccent: white;
-  --lightaccent: black;
-  --darkaccent: rgb(57, 49, 160);
+    --background: #1A1B26;
 }
 
-body {
-  background-color: var(--mainbackground);
-  color: var(--mainaccent);
-}
+/* ================================== 
+    Header.js */
 
 header {
-  background-color: var(--darkaccent);
-  display: grid;
-  align-items: center;
-}
-
-h1 {
-  text-align: center;
-  margin: auto;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    text-align: center;
 }
