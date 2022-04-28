@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import './reset.css';
 import './App.css';
 // Components
@@ -9,6 +11,9 @@ import History from './components/History';
 
 
 function App() {
+
+
+
   return (
     <div className="app">
       <Header />
