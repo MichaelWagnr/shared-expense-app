@@ -12,14 +12,24 @@ import History from './components/History';
 
 function App() {
 
+  const [submissions, addSubmission] = useState(0);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let purchase = parseFloat(e.target.total.value);
+    // const purchase = {
+    //   purchaser: e.target.purchaser.value,
+    //   total: e.target.total.value,
+    // };
+    addSubmission(submissions + purchase);
+  }
 
   return (
     <div className="app">
       <Header />
       <Dashboard />
-      <Form />
-      <History />
+      <Form handleSubmit={handleSubmit} />
+      <History submissions={submissions} />
     </div>
   );
 }

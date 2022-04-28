@@ -1,9 +1,9 @@
 import React from 'react';
 
-const History = () => {
+const History = (props) => {
     return (
         <div className="history">
-            History...
+            {props.submissions}
         </div>
     );
 }
