@@ -51,6 +51,7 @@ header {
     border-radius: var(--b-rad);
     text-align: center;
     grid-column: 1 / span 3;
+    color: var(--sky-blue);
 }
 
 /* ================================== 
@@ -66,6 +67,10 @@ form {
     border-top: var(--border);
     display: grid;
     place-items: center;
+}
+
+form>*:not(label) {
+    color: var(--purple);
 }
 
 /* ================================== 
