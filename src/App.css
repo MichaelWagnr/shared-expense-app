@@ -90,3 +90,18 @@ div.history {
     border-radius: var(--b-rad);
     grid-column: 1 / span 3;
 }
+
+/* ================================== 
+Purchase.js */
+
+div.purchase {
+    display: flex;
+}
+
+div.purchase:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+span.total {
+    color: var(--pink);
+}

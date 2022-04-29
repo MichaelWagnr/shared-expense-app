@@ -11,16 +11,6 @@ import History from './components/History';
 
 function App() {
 
-  // const [submissions, addSubmission] = useState([]);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const purchase = [
-  //     e.target.purchaser.value,
-  //     parseFloat(e.target.total.value),
-  //   ];
-  //   addSubmission([...submissions, purchase]);
-  // };
-
   const [submissions, addSubmission] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +20,8 @@ function App() {
       desc: e.target.desc.value,
     };
     addSubmission(submissions => [...submissions, purchase]);
+    console.log(e.target);
+    e.target.reset();
   };
 
   return (
