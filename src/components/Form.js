@@ -13,6 +13,8 @@ const Form = (props) => {
                 </select>
                 <label htmlFor="total">Receipt total:</label>
                 <input name="total" type="text" />
+                <label htmlFor="desc">Description:</label>
+                <input name="desc" type="text" />
                 <br />
                 <button type="submit">Submit</button>
             </form>
