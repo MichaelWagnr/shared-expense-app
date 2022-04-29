@@ -9,20 +9,18 @@ import Dashboard from './components/Dashboard';
 import History from './components/History';
 
 
-
 function App() {
 
-  const [submissions, addSubmission] = useState(0);
+  const [submissions, addSubmission] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let purchase = parseFloat(e.target.total.value);
-    // const purchase = {
-    //   purchaser: e.target.purchaser.value,
-    //   total: e.target.total.value,
-    // };
-    addSubmission(submissions + purchase);
-  }
+    const purchase = [
+      e.target.purchaser.value,
+      parseFloat(e.target.total.value),
+    ];
+    addSubmission([...submissions, purchase]);
+  };
 
   return (
     <div className="app">
