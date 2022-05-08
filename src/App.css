@@ -99,6 +99,10 @@ div.purchase {
     grid-template-columns: 4fr 2fr 10fr 1fr
 }
 
+div.purchase>*:not(button) {
+    border-left: var(--border);
+}
+
 div.purchase:nth-child(even) {
     background-color: var(--bg-light);
 }
