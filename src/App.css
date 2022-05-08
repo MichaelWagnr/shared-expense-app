@@ -95,11 +95,24 @@ div.history {
 Purchase.js */
 
 div.purchase {
-    display: flex;
+    display: grid;
+    grid-template-columns: 4fr 2fr 10fr 1fr
 }
 
 div.purchase:nth-child(even) {
     background-color: var(--bg-light);
+}
+
+div.purchase span {
+    align-self: center;
+}
+
+button.delete {
+    font-size: 1rem;
+    border-radius: 50%;
+    padding-top: 0.22rem;
+    width: 3ch;
+    height: 3ch;
 }
 
 span.total {
