@@ -8,9 +8,7 @@ const Purchase = (props) => {
             <span className="description">{props.desc}</span>
             <button
                 className="delete"
-                onClick={() => {
-                    props.handleDelete(props.index);
-                }}>
+                onClick={() => { props.handleDelete(props.index); }}>
                 &times;
             </button>
         </div >

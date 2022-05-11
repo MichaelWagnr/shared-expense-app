@@ -11,6 +11,7 @@ import History from './components/History';
 
 function App() {
 
+  //Handle form submit, store results in an Obj in State
   const [submissions, editSubmission] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +24,20 @@ function App() {
     e.target.reset();
   };
 
+  //Validate that total submitted is a number
+  const [activeFormError, toggleActiveFormError] = useState(false);
+  const validateForm = (e) => {
+    e.preventDefault();
+    // console.log(parseFloat(e.target.total.value));
+    // console.log(parseFloat(e.target.total.value).isNaN);
+
+    isNaN(parseFloat(e.target.total.value))
+      ? toggleActiveFormError(true)
+      : toggleActiveFormError(false);
+    // handleSubmit(e);
+  }
+
+
   const handleDelete = (key) => {
     editSubmission(submissions.filter((submission, index) => index !== key))
   }
@@ -31,7 +46,10 @@ function App() {
     <div className="app">
       <Header />
       <Dashboard />
-      <Form handleSubmit={handleSubmit} />
+      <Form
+        handleSubmit={handleSubmit}
+        validateForm={validateForm}
+      />
       <History
         submissions={submissions}
         handleDelete={handleDelete}
