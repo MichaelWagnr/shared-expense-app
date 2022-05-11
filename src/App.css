@@ -54,6 +54,10 @@ header {
     color: var(--sky-blue);
 }
 
+.error {
+    color: var(--red-orange);
+}
+
 /* ================================== 
 Form.js */
 
@@ -73,12 +77,11 @@ form>*:not(label) {
     color: var(--purple);
 }
 
-.number-error::after {
+label.number-error::after {
     content: "Must be valid number.";
     color: var(--red-orange);
     display: block;
 }
-
 
 
 /* ================================== 

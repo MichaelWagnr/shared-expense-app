@@ -28,13 +28,12 @@ function App() {
   const [activeFormError, toggleActiveFormError] = useState(false);
   const validateForm = (e) => {
     e.preventDefault();
-    // console.log(parseFloat(e.target.total.value));
-    // console.log(parseFloat(e.target.total.value).isNaN);
-
-    isNaN(parseFloat(e.target.total.value))
-      ? toggleActiveFormError(true)
-      : toggleActiveFormError(false);
-    // handleSubmit(e);
+    if (isNaN(parseFloat(e.target.total.value))) {
+      toggleActiveFormError(true);
+    } else {
+      toggleActiveFormError(false);
+      handleSubmit(e);
+    }
   }
 
   const handleDelete = (key) => {
@@ -43,10 +42,9 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header activeFormError={activeFormError} />
       <Dashboard />
       <Form
-        handleSubmit={handleSubmit}
         validateForm={validateForm}
         activeFormError={activeFormError}
       />

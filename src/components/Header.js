@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <header>
+        <header className={props.activeFormError ? 'error' : ''}>
             <h1>Royal Mint</h1>
         </header>
     )
