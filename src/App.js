@@ -11,7 +11,7 @@ import History from './components/History';
 
 function App() {
 
-  //Handle form submit, store results in an Obj in State
+  //Handle form submit, store results in an Object in State
   const [submissions, editSubmission] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,7 +37,6 @@ function App() {
     // handleSubmit(e);
   }
 
-
   const handleDelete = (key) => {
     editSubmission(submissions.filter((submission, index) => index !== key))
   }
@@ -49,6 +48,7 @@ function App() {
       <Form
         handleSubmit={handleSubmit}
         validateForm={validateForm}
+        activeFormError={activeFormError}
       />
       <History
         submissions={submissions}

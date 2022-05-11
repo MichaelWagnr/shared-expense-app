@@ -14,14 +14,20 @@ const Form = (props) => {
                     <option value="A">A</option>
                     <option value="B">B</option>
                 </select>
-                <label htmlFor="total">Receipt total:</label>
-                <input name="total" type="text" />
+                <label
+                    htmlFor="total"
+                    className={props.activeFormError ? 'number-error' : ''}
+                >Receipt total:</label>
+                <input
+                    name="total"
+                    type="text"
+                />
                 <label htmlFor="desc">Description:</label>
                 <input name="desc" type="text" />
                 <br />
                 <button type="submit">Submit</button>
             </form>
-        </div>
+        </div >
     );
 }
 

@@ -73,6 +73,14 @@ form>*:not(label) {
     color: var(--purple);
 }
 
+.number-error::after {
+    content: "Must be valid number.";
+    color: var(--red-orange);
+    display: block;
+}
+
+
+
 /* ================================== 
 Dashboard.js */
 
