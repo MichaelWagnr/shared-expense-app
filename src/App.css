@@ -51,7 +51,7 @@ header {
     border-radius: var(--b-rad);
     text-align: center;
     grid-column: 1 / span 3;
-    color: var(--sky-blue);
+    color: var(--turquoise);
 }
 
 .error {
@@ -93,6 +93,10 @@ div.dashboard {
     grid-column: 1 / span 2;
 }
 
+div.dashboard input {
+    color: var(--sky-blue);
+}
+
 /* ================================== 
 History.js */
 
@@ -128,8 +132,13 @@ button.delete {
     padding-top: 0.22rem;
     width: 3ch;
     height: 3ch;
+    color: var(--pink);
+}
+
+span.purchaser {
+    color: var(--sky-blue);
 }
 
 span.total {
-    color: var(--pink);
+    color: var(--green);
 }
