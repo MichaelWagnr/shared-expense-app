@@ -24,7 +24,7 @@ function App() {
     e.target.reset();
   };
 
-  //Validate that receipt total submitted is a number
+  //Validate the receipt total submitted is a number
   const [activeFormError, toggleActiveFormError] = useState(false);
   const validateForm = (e) => {
     e.preventDefault();
@@ -46,27 +46,9 @@ function App() {
   const [nameB, updateNameB] = useState('B');
 
   const selectName = (e) => {
-    console.log(e.target.value);
-
-    // switch (e.target.name) {
-    //   case 'nameA':
-    //     updateNames([e.target.value, ...names[1]]);
-    //     break;
-    //   case 'nameB':
-    //     updateNames([...names[0], e.target.value]);
-    //     break;
-    //   default: console.error('Error updating names');
-    // }
-
     e.target.name === 'nameA'
       ? updateNameA(e.target.value)
       : updateNameB(e.target.value)
-
-    // if (e.target.name === "nameA") {
-    //   updateNames(names[0] === e.target.nameA.value)
-    // } else {
-    //   updateNames(names[1] === e.target.nameB.value)
-    // }
   };
 
   //App structure

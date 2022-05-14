@@ -8,8 +8,8 @@ const Form = (props) => {
             <form onSubmit={props.validateForm}>
                 <label htmlFor="purchaser">Purchased by:</label>
                 <select name="purchaser" id="purchaser">
-                    <option value="A">{props.nameA}</option>
-                    <option value="B">{props.nameB}</option>
+                    <option value={props.nameA}>{props.nameA}</option>
+                    <option value={props.nameB}>{props.nameB}</option>
                 </select>
                 <label
                     htmlFor="total"
