@@ -24,7 +24,7 @@ function App() {
     e.target.reset();
   };
 
-  //Validate that total submitted is a number
+  //Validate that receipt total submitted is a number
   const [activeFormError, toggleActiveFormError] = useState(false);
   const validateForm = (e) => {
     e.preventDefault();
@@ -36,15 +36,22 @@ function App() {
     }
   }
 
+  //Delete submission
   const handleDelete = (key) => {
     editSubmission(submissions.filter((submission, index) => index !== key))
   }
 
+  //Choose names of purchasers
+  const [names, updateNames] = useState(['A', 'B']);
+
+
+  //App structure
   return (
     <div className="app">
       <Header activeFormError={activeFormError} />
       <Dashboard />
       <Form
+        names={names}
         validateForm={validateForm}
         activeFormError={activeFormError}
       />
