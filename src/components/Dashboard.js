@@ -10,14 +10,14 @@ const Dashboard = (props) => {
                 autoComplete="off"
                 type="text"
                 name="nameA"
-                // value={props.names[0]}
+                value={props.nameA}
                 onChange={props.selectName}
             />
             <input
                 autoComplete="off"
                 type="text"
                 name="nameB"
-                // value={props.names[1]}
+                value={props.nameB}
                 onChange={props.selectName}
             />
         </div>

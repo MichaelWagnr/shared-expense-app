@@ -64,7 +64,8 @@ function App() {
     <div className="app">
       <Header activeFormError={activeFormError} />
       <Dashboard
-        // names={names}
+        nameA={nameA}
+        nameB={nameB}
         selectName={selectName}
       />
       <Form
