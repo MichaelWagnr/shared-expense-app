@@ -7,12 +7,14 @@ const Dashboard = (props) => {
             <br />
 
             <input
+                autoComplete="off"
                 type="text"
                 name="nameA"
                 // value={props.names[0]}
                 onChange={props.selectName}
             />
             <input
+                autoComplete="off"
                 type="text"
                 name="nameB"
                 // value={props.names[1]}
