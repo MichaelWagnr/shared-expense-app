@@ -5,7 +5,10 @@ const Form = (props) => {
     return (
         <div className="form">
             <p>Submit an expense / shared purchase:</p>
-            <form onSubmit={props.validateForm}>
+            <form
+                onSubmit={props.validateForm}
+                autoComplete="off"
+            >
                 <label htmlFor="purchaser">Purchased by:</label>
                 <select name="purchaser" id="purchaser">
                     <option value={props.nameA}>{props.nameA}</option>
