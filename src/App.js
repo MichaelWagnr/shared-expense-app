@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './reset.css';
 import './App.css';
@@ -12,7 +12,8 @@ import History from './components/History';
 function App() {
 
   //Handle form submit, store results in an Object in State
-  const [submissions, editSubmission] = useState([]);
+  const [submissions, editSubmission] = useState(() => JSON.parse(localStorage.getItem("submissions")) || []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const purchase = {
@@ -42,14 +43,21 @@ function App() {
   }
 
   //Choose names of purchasers
-  const [nameA, updateNameA] = useState('A');
-  const [nameB, updateNameB] = useState('B');
+  const [nameA, updateNameA] = useState(() => localStorage.getItem("nameA") || 'A');
+  const [nameB, updateNameB] = useState(() => localStorage.getItem("nameB") || 'B');
 
   const selectName = (e) => {
     e.target.name === 'nameA'
       ? updateNameA(e.target.value)
       : updateNameB(e.target.value)
   };
+
+  //Persist State to LocalStorage
+  useEffect(() => {
+    localStorage.setItem("submissions", JSON.stringify(submissions));
+    localStorage.setItem("nameA", nameA);
+    localStorage.setItem("nameB", nameB);
+  })
 
   //App structure
   return (
