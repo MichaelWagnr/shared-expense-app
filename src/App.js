@@ -59,6 +59,12 @@ function App() {
     localStorage.setItem("nameB", nameB);
   })
 
+  //Perceive selected Purchaser
+  const [selectedName, setSelectedName] = useState(nameA)
+  const displayPurchaser = (e) => {
+    setSelectedName(e.target.value);
+  }
+
   //App structure
   return (
     <div className="app">
@@ -71,8 +77,10 @@ function App() {
       <Form
         nameA={nameA}
         nameB={nameB}
+        selectedName={selectedName}
         validateForm={validateForm}
         activeFormError={activeFormError}
+        displayPurchaser={displayPurchaser}
       />
       <History
         submissions={submissions}

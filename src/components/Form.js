@@ -11,7 +11,7 @@ const Form = (props) => {
                 autoComplete="off"
             >
                 <label htmlFor="purchaser">Purchased by:</label>
-                <select name="purchaser" id="purchaser">
+                <select name="purchaser" id="purchaser" onChange={props.displayPurchaser}>
                     <option value={props.nameA}>{props.nameA}</option>
                     <option value={props.nameB}>{props.nameB}</option>
                 </select>
@@ -27,7 +27,11 @@ const Form = (props) => {
                 <input name="desc" type="text" />
                 <label htmlFor="slider">Amount shared:</label>
 
-                <Slider />
+                <Slider
+                    nameA={props.nameA}
+                    nameB={props.nameB}
+                    selectedName={props.selectedName}
+                />
 
                 <input name="slider" className="slider" type="range" min="0" max="100" step="10" />
                 <br />
