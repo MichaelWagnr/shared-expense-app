@@ -83,6 +83,9 @@ label.number-error::after {
     display: block;
 }
 
+div.form .slider {
+    outline: 0;
+}
 
 /* ================================== 
 Dashboard.js */
@@ -141,4 +144,14 @@ span.purchaser {
 
 span.total {
     color: var(--green);
+}
+
+/* ================================== 
+Slider.js */
+
+div.slider-display {
+    border: var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }

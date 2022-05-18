@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from './Slider.js';
 
 const Form = (props) => {
 
@@ -24,6 +25,11 @@ const Form = (props) => {
                 />
                 <label htmlFor="desc">Description:</label>
                 <input name="desc" type="text" />
+                <label htmlFor="slider">Amount shared:</label>
+
+                <Slider />
+
+                <input name="slider" className="slider" type="range" min="0" max="100" step="10" />
                 <br />
                 <button type="submit">Submit</button>
             </form>
