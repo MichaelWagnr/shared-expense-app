@@ -65,6 +65,12 @@ function App() {
     setSelectedName(e.target.value);
   }
 
+  //Display percentage in form
+  const [currentPercentage, setCurrentPercentage] = useState(50);
+  const displayPercentage = (e) => {
+    setCurrentPercentage(e.target.value);
+  }
+
   //App structure
   return (
     <div className="app">
@@ -78,9 +84,11 @@ function App() {
         nameA={nameA}
         nameB={nameB}
         selectedName={selectedName}
+        currentPercentage={currentPercentage}
         validateForm={validateForm}
         activeFormError={activeFormError}
         displayPurchaser={displayPurchaser}
+        displayPercentage={displayPercentage}
       />
       <History
         submissions={submissions}

@@ -31,9 +31,18 @@ const Form = (props) => {
                     nameA={props.nameA}
                     nameB={props.nameB}
                     selectedName={props.selectedName}
+                    currentPercentage={props.currentPercentage}
                 />
 
-                <input name="slider" className="slider" type="range" min="0" max="100" step="10" />
+                <input
+                    name="slider"
+                    className="slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="10"
+                    onChange={props.displayPercentage}
+                />
                 <br />
                 <button type="submit">Submit</button>
             </form>

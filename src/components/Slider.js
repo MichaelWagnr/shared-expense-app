@@ -10,8 +10,8 @@ const Slider = (props) => {
                     : props.nameA
                 }
             </div>
-            <div>50</div>
-            <div>50</div>
+            <div>{100 - props.currentPercentage}%</div>
+            <div>{props.currentPercentage}%</div>
         </div>
     );
 }
