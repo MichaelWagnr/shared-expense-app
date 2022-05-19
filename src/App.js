@@ -20,9 +20,12 @@ function App() {
       purchaser: e.target.purchaser.value,
       total: parseFloat(e.target.total.value),
       desc: e.target.desc.value,
+      shared: e.target.slider.value,
     };
     editSubmission(submissions => [...submissions, purchase]);
     e.target.reset();
+    setCurrentPercentage(50);
+    setSelectedName(nameA);
   };
 
   //Validate the receipt total submitted is a number
