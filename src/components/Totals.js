@@ -21,15 +21,15 @@ const Totals = ({ submissions, nameA, nameB }) => {
     };
 
     const bOwesA = totalOwedTo(nameA, submissions);
-    console.log(bOwesA);
     const aOwesB = totalOwedTo(nameB, submissions);
-    console.log(aOwesB);
 
     return (
-        <div className="totals">
-            {bOwesA}
-            <br />
-            {aOwesB}
+        <div className="total">
+            {
+                bOwesA > aOwesB
+                    ? `${nameB} owes ${nameA} ${bOwesA - aOwesB}`
+                    : `${nameA} owes ${nameB} ${aOwesB - bOwesA}`
+            }
         </div>
     );
 }
