@@ -82,6 +82,7 @@ function App() {
         nameA={nameA}
         nameB={nameB}
         selectName={selectName}
+        submissions={submissions}
       />
       <Form
         nameA={nameA}
