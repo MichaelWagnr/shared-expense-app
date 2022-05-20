@@ -14,13 +14,18 @@ const Totals = ({ submissions, nameA, nameB }) => {
     const bOwesA = totalOwedTo(nameA, submissions);
     const aOwesB = totalOwedTo(nameB, submissions);
 
-    if (bOwesA === aOwesB) {
+
+    if (submissions.length === 0) { // No submissions
+        return (
+            <div clasName="total"></div>
+        )
+    } else if (bOwesA === aOwesB) { // Owed ammounts equal
         return (
             <div className="total">
-                <p className="debter">Even Steven</p>
+                <p className="balance">Amounts owed are in balance</p>
             </div>
-        );
-    } else {
+        )
+    } else { // Owed ammounts !equal
         return (
             bOwesA > aOwesB
                 ? <div className="total">

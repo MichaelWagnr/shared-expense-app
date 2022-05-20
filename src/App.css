@@ -74,7 +74,7 @@ form {
 }
 
 form>*:not(label) {
-    color: var(--purple);
+    color: var(--light-purple);
 }
 
 label.number-error::after {
@@ -174,4 +174,8 @@ div.total p {
 p.debt {
     color: var(--green);
     font-size: 130%;
+}
+
+p.balance {
+    color: var(--turquoise);
 }
