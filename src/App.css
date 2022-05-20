@@ -59,7 +59,7 @@ header {
 }
 
 /* ================================== 
-Form.js */
+    Form.js */
 
 div.form {
     border: var(--border);
@@ -88,7 +88,7 @@ div.form .slider {
 }
 
 /* ================================== 
-Dashboard.js */
+    Dashboard.js */
 
 div.dashboard {
     border: var(--border);
@@ -101,7 +101,7 @@ div.dashboard input {
 }
 
 /* ================================== 
-History.js */
+    History.js */
 
 div.history {
     border: var(--border);
@@ -110,7 +110,7 @@ div.history {
 }
 
 /* ================================== 
-Purchase.js */
+    Purchase.js */
 
 div.purchase {
     display: grid;
@@ -147,7 +147,7 @@ span.total {
 }
 
 /* ================================== 
-Slider.js */
+    Slider.js */
 
 div.slider-display {
     border: var(--border);

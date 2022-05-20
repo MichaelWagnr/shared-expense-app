@@ -20,7 +20,7 @@ function App() {
       purchaser: e.target.purchaser.value,
       total: parseFloat(e.target.total.value),
       desc: e.target.desc.value,
-      shared: e.target.slider.value,
+      shared: parseFloat(e.target.slider.value),
     };
     editSubmission(submissions => [...submissions, purchase]);
     e.target.reset();
