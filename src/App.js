@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { formatCurrency } from './helpers';
 
 import './reset.css';
 import './App.css';

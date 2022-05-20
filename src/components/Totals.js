@@ -30,11 +30,11 @@ const Totals = ({ submissions, nameA, nameB }) => {
             bOwesA > aOwesB
                 ? <div className="total">
                     <p className="debter">{nameB} owes {nameA}:</p>
-                    <p className="debt">${bOwesA - aOwesB}</p>
+                    <p className="debt">${(bOwesA - aOwesB).toFixed(2)}</p>
                 </div>
                 : <div className="total">
                     <p className="debter">{nameA} owes {nameB}:</p>
-                    <p className="debt">${aOwesB - bOwesA}</p>
+                    <p className="debt">${(aOwesB - bOwesA).toFixed(2)}</p>
                 </div>
         )
     }

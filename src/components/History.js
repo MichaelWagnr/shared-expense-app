@@ -10,7 +10,7 @@ const History = (props) => {
                         key={index}
                         index={index}
                         purchaser={submission.purchaser}
-                        total={submission.total}
+                        total={submission.total.toFixed(2)}
                         desc={submission.desc}
                         handleDelete={props.handleDelete}
                     />
