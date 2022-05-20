@@ -11,6 +11,7 @@ const Dashboard = (props) => {
                 nameB={props.nameB}
                 submissions={props.submissions}
             />
+            <br />
             <SetNames
                 nameA={props.nameA}
                 nameB={props.nameB}

@@ -94,10 +94,12 @@ div.dashboard {
     border: var(--border);
     border-radius: var(--b-rad);
     grid-column: 1 / span 2;
+    display: grid;
+    grid-template-rows: max-content 1fr 1ch max-content;
 }
 
 div.dashboard input {
-    color: var(--sky-blue);
+    color: var(--purple);
 }
 
 /* ================================== 
@@ -154,4 +156,22 @@ div.slider-display {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+}
+
+/* ================================== 
+    Totals.js */
+
+div.total {
+    border: var(--border);
+    display: grid;
+    place-items: center;
+}
+
+div.total p {
+    margin: 0;
+}
+
+p.debt {
+    color: var(--green);
+    font-size: 130%;
 }
