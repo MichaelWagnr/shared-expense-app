@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shared-expenses-app/static/css/main.5d918bc1.css",
+    "main.js": "/shared-expenses-app/static/js/main.867119fa.js",
+    "index.html": "/shared-expenses-app/index.html",
+    "main.5d918bc1.css.map": "/shared-expenses-app/static/css/main.5d918bc1.css.map",
+    "main.867119fa.js.map": "/shared-expenses-app/static/js/main.867119fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d918bc1.css",
+    "static/js/main.867119fa.js"
+  ]
+}
