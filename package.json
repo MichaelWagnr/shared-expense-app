@@ -2,7 +2,7 @@
   "name": "shared-finances-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://michaelwagnr.github.io/shared-expenses-app",
+  "homepage": "https://michaelwagnr.github.io/shared-expense-app",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
